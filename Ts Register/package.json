@@ -1,0 +1,30 @@
+{
+  "name": "discord-v14-register-system",
+  "version": "1.0.0",
+  "description": "Discord.js v14 premium register/welcome/invite system",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "pm2:start": "npm run build && pm2 start ecosystem.config.cjs",
+    "pm2:restart": "npm run build && pm2 restart shaneria-register",
+    "pm2:logs": "pm2 logs shaneria-register",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.18.0",
+    "canvas": "^3.2.3",
+    "discord.js": "^14.22.1",
+    "dotenv": "^17.2.2",
+    "mongoose": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
